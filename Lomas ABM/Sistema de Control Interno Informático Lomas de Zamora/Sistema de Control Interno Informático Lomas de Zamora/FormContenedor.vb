@@ -1,5 +1,4 @@
 ﻿Imports System.Data.OleDb
-Imports System.Data.SqlClient
 Imports System.IO
 Imports System.Runtime.InteropServices
 
@@ -20,7 +19,7 @@ Public Class FormContenedor
     Private Sub FormContenedor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Dim objConexion As OleDbConnection
-        objConexion = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\PC-SERVER\db\ParqueBaronDB.mdb")
+        objConexion = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\PC-SERVER\db\ParqueBaronDB.mdb;Persist Security Info=True;Jet OLEDB:Database Password=parbadb5178")
 
         BtnInicio.Enabled = False
         BtnReclamos.Enabled = True

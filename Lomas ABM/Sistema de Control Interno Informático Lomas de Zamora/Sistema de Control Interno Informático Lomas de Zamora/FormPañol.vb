@@ -3,8 +3,6 @@
         'TODO: esta línea de código carga datos en la tabla 'ParqueBaronDBDataSet.inventario' Puede moverla o quitarla según sea necesario.
         Me.InventarioTableAdapter.Fill(Me.ParqueBaronDBDataSet.inventario)
         TxtSearch.Clear()
-        Button1.Enabled = False
-        BtnBorrar.Enabled = False
 
         ComboBox1.Items.Add("Barrido")
         ComboBox1.Items.Add("Basura")
@@ -17,14 +15,13 @@
         ComboBox1.Items.Add("Animales muertos")
         ComboBox1.SelectedIndex = 0
 
-        ComboSearch.Items.Add("Número reclamo")
-        ComboSearch.Items.Add("Tipo de reclamo")
+        ComboSearch.Items.Add("Todo")
+        ComboSearch.Items.Add("Tipo")
         ComboSearch.Items.Add("Nombre")
-        ComboSearch.Items.Add("Apellido")
-        ComboSearch.Items.Add("DNI")
-        ComboSearch.Items.Add("Dirección")
-        ComboSearch.Items.Add("Fecha")
-        ComboSearch.Items.Add("Observaciones")
+        ComboSearch.Items.Add("Descripcion")
+        ComboSearch.Items.Add("Localizacion")
+        ComboSearch.Items.Add("Cantidad")
+        ComboSearch.Items.Add("Serial")
         ComboSearch.SelectedIndex = 0
 
     End Sub
@@ -34,6 +31,7 @@
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
 
         Button1.Enabled = False
+        BtnBorrar.Enabled = False
         Try
             Me.InventarioBindingSource.Filter = Nothing
             Me.InventarioTableAdapter.Fill(Me.ParqueBaronDBDataSet.inventario)

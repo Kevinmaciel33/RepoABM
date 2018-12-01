@@ -30,9 +30,11 @@ Partial Class FormPañol
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.InventarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ParqueBaronDBDataSet = New Sistema_de_Control_Interno_Informático_Lomas_de_Zamora.ParqueBaronDBDataSet()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -53,15 +55,14 @@ Partial Class FormPañol
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.InventarioTableAdapter = New Sistema_de_Control_Interno_Informático_Lomas_de_Zamora.ParqueBaronDBDataSetTableAdapters.inventarioTableAdapter()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.IDInventarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LlaveStockDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TipoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Serial = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LocalizacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CantidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LlaveStockDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         GroupBox4 = New System.Windows.Forms.GroupBox()
         GroupBox4.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -176,16 +177,26 @@ Partial Class FormPañol
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos"
         '
-        'ComboBox1
+        'Label7
         '
-        Me.ComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InventarioBindingSource, "Tipo", True))
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(6, 34)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(220, 21)
-        Me.ComboBox1.Sorted = True
-        Me.ComboBox1.TabIndex = 21
+        Me.Label7.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(6, 268)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(109, 16)
+        Me.Label7.TabIndex = 24
+        Me.Label7.Text = "Codigo Interno"
+        '
+        'TextBox6
+        '
+        Me.TextBox6.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InventarioBindingSource, "LlaveStock", True))
+        Me.TextBox6.Location = New System.Drawing.Point(6, 287)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(220, 20)
+        Me.TextBox6.TabIndex = 23
         '
         'InventarioBindingSource
         '
@@ -196,6 +207,17 @@ Partial Class FormPañol
         '
         Me.ParqueBaronDBDataSet.DataSetName = "ParqueBaronDBDataSet"
         Me.ParqueBaronDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InventarioBindingSource, "Tipo", True))
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(6, 34)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(220, 21)
+        Me.ComboBox1.Sorted = True
+        Me.ComboBox1.TabIndex = 21
         '
         'TextBox5
         '
@@ -429,7 +451,7 @@ Partial Class FormPañol
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDInventarioDataGridViewTextBoxColumn, Me.LlaveStockDataGridViewTextBoxColumn, Me.TipoDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.LocalizacionDataGridViewTextBoxColumn, Me.CantidadDataGridViewTextBoxColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDInventarioDataGridViewTextBoxColumn, Me.TipoDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.Serial, Me.LocalizacionDataGridViewTextBoxColumn, Me.CantidadDataGridViewTextBoxColumn, Me.LlaveStockDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.InventarioBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(6, 19)
         Me.DataGridView1.MultiSelect = False
@@ -443,27 +465,6 @@ Partial Class FormPañol
         '
         Me.InventarioTableAdapter.ClearBeforeFill = True
         '
-        'TextBox6
-        '
-        Me.TextBox6.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InventarioBindingSource, "LlaveStock", True))
-        Me.TextBox6.Location = New System.Drawing.Point(6, 287)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(220, 20)
-        Me.TextBox6.TabIndex = 23
-        '
-        'Label7
-        '
-        Me.Label7.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(6, 268)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(109, 16)
-        Me.Label7.TabIndex = 24
-        Me.Label7.Text = "Codigo Interno"
-        '
         'IDInventarioDataGridViewTextBoxColumn
         '
         Me.IDInventarioDataGridViewTextBoxColumn.DataPropertyName = "ID_Inventario"
@@ -471,14 +472,6 @@ Partial Class FormPañol
         Me.IDInventarioDataGridViewTextBoxColumn.Name = "IDInventarioDataGridViewTextBoxColumn"
         Me.IDInventarioDataGridViewTextBoxColumn.ReadOnly = True
         Me.IDInventarioDataGridViewTextBoxColumn.Width = 96
-        '
-        'LlaveStockDataGridViewTextBoxColumn
-        '
-        Me.LlaveStockDataGridViewTextBoxColumn.DataPropertyName = "LlaveStock"
-        Me.LlaveStockDataGridViewTextBoxColumn.HeaderText = "Codigo Interno"
-        Me.LlaveStockDataGridViewTextBoxColumn.Name = "LlaveStockDataGridViewTextBoxColumn"
-        Me.LlaveStockDataGridViewTextBoxColumn.ReadOnly = True
-        Me.LlaveStockDataGridViewTextBoxColumn.Width = 101
         '
         'TipoDataGridViewTextBoxColumn
         '
@@ -504,6 +497,14 @@ Partial Class FormPañol
         Me.DescripcionDataGridViewTextBoxColumn.ReadOnly = True
         Me.DescripcionDataGridViewTextBoxColumn.Width = 88
         '
+        'Serial
+        '
+        Me.Serial.DataPropertyName = "Serial"
+        Me.Serial.HeaderText = "Serial"
+        Me.Serial.Name = "Serial"
+        Me.Serial.ReadOnly = True
+        Me.Serial.Width = 58
+        '
         'LocalizacionDataGridViewTextBoxColumn
         '
         Me.LocalizacionDataGridViewTextBoxColumn.DataPropertyName = "Localizacion"
@@ -519,6 +520,14 @@ Partial Class FormPañol
         Me.CantidadDataGridViewTextBoxColumn.Name = "CantidadDataGridViewTextBoxColumn"
         Me.CantidadDataGridViewTextBoxColumn.ReadOnly = True
         Me.CantidadDataGridViewTextBoxColumn.Width = 74
+        '
+        'LlaveStockDataGridViewTextBoxColumn
+        '
+        Me.LlaveStockDataGridViewTextBoxColumn.DataPropertyName = "LlaveStock"
+        Me.LlaveStockDataGridViewTextBoxColumn.HeaderText = "Codigo Interno"
+        Me.LlaveStockDataGridViewTextBoxColumn.Name = "LlaveStockDataGridViewTextBoxColumn"
+        Me.LlaveStockDataGridViewTextBoxColumn.ReadOnly = True
+        Me.LlaveStockDataGridViewTextBoxColumn.Width = 101
         '
         'FormPañol
         '
@@ -574,10 +583,11 @@ Partial Class FormPañol
     Friend WithEvents Label7 As Label
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents IDInventarioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents LlaveStockDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TipoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DescripcionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents Serial As DataGridViewTextBoxColumn
     Friend WithEvents LocalizacionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CantidadDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents LlaveStockDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

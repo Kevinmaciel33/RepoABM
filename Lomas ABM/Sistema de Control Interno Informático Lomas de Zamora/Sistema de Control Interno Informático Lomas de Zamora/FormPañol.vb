@@ -15,7 +15,6 @@
         ComboBox1.Items.Add("Animales muertos")
         ComboBox1.SelectedIndex = 0
 
-        ComboSearch.Items.Add("Todo")
         ComboSearch.Items.Add("Tipo")
         ComboSearch.Items.Add("Nombre")
         ComboSearch.Items.Add("Descripcion")
@@ -146,24 +145,23 @@
             '     "OR (año LIKE '" & TxtSearch.Text & "')"
 
             Select Case Tsearch
-                Case "Todo"
+                Case "Tipo"
                     InventarioBindingSource.Filter = "(Convert(Tipo, 'System.String') LIKE '" & TxtSearch.Text & "%" & "')"
-                Case "Número reclamo"
-                    InventarioBindingSource.Filter = "(Convert(NumReclamo, 'System.String') LIKE '" & TxtSearch.Text & "%" & "')"
-                Case "Tipo de reclamo"
-                    InventarioBindingSource.Filter = "(Convert(TipoReclamo, 'System.String') LIKE '" & TxtSearch.Text & "%" & "')"
-                Case "Apellido"
-                    InventarioBindingSource.Filter = "(Convert(Apellido, 'System.String') LIKE '" & TxtSearch.Text & "%" & "')"
                 Case "Nombre"
                     InventarioBindingSource.Filter = "(Convert(Nombre, 'System.String') LIKE '" & TxtSearch.Text & "%" & "')"
+                Case "Descripcion"
+                    InventarioBindingSource.Filter = "(Convert(Descripcion, 'System.String') LIKE '" & TxtSearch.Text & "%" & "')"
+                Case "Localizacion"
+                    InventarioBindingSource.Filter = "(Convert(Localizacion, 'System.String') LIKE '" & TxtSearch.Text & "%" & "')"
+                Case "Cantidad"
+                    InventarioBindingSource.Filter = "(Convert(Cantidad, 'System.String') LIKE '" & TxtSearch.Text & "%" & "')"
                 Case "DNI"
-                    InventarioBindingSource.Filter = "(Convert(DNI, 'System.String') LIKE '" & TxtSearch.Text & "%" & "')"
+                    InventarioBindingSource.Filter = "(Convert(Serial, 'System.String') LIKE '" & TxtSearch.Text & "%" & "')"
                 Case "Todo"
-                    InventarioBindingSource.Filter = "(Convert(NumReclamo, 'System.String') LIKE '" & TxtSearch.Text & "%" & "')" &
-                 "OR (TipoReclamo LIKE '" & TxtSearch.Text & "%" & "') Or (Apellido LIKE '" & TxtSearch.Text & "%" & "')" &
-                 "OR (Nombre LIKE '" & TxtSearch.Text & "%" & "') Or (DNI LIKE '" & TxtSearch.Text & "%" & "')" &
-                 "OR (Direccion LIKE '" & TxtSearch.Text & "%" & "') Or (Telefono LIKE '" & TxtSearch.Text & "%" & "')" &
-                 "OR (Fecha LIKE '" & TxtSearch.Text & "%" & "')"
+                    InventarioBindingSource.Filter = "(Convert(Tipo, 'System.String') LIKE '" & TxtSearch.Text & "%" & "')" &
+                 "OR (Nombre LIKE '" & TxtSearch.Text & "%" & "') Or (Descripcion LIKE '" & TxtSearch.Text & "%" & "')" &
+                 "OR (Localizacion LIKE '" & TxtSearch.Text & "%" & "') Or (Cantidad LIKE '" & TxtSearch.Text & "%" & "')" &
+                 "OR (Serial LIKE '" & TxtSearch.Text & "%" & "')"
 
             End Select
 

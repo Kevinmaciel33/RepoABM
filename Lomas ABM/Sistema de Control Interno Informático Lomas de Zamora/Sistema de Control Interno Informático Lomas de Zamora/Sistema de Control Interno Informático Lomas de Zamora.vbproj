@@ -289,6 +289,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Resources\result.png" />
+    <None Include="Resources\analytics.png" />
     <None Include="Resources\remito.png" />
     <None Include="Resources\login.png" />
     <None Include="Resources\login.bmp" />

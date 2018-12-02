@@ -26,13 +26,16 @@ Partial Class FormContenedor
         Me.PanelContenedor = New System.Windows.Forms.Panel()
         Me.PanelForm = New System.Windows.Forms.Panel()
         Me.GroupBoxLogin = New System.Windows.Forms.GroupBox()
-        Me.BtnLogin = New System.Windows.Forms.Button()
         Me.TextBoxPass = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBoxUser = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LabelSaludo = New System.Windows.Forms.Label()
         Me.PanelMenu = New System.Windows.Forms.Panel()
+        Me.PanelBarraTitulo = New System.Windows.Forms.Panel()
+        Me.LabelTitulo = New System.Windows.Forms.Label()
+        Me.BtnLogin = New System.Windows.Forms.Button()
+        Me.BtnReportes = New System.Windows.Forms.Button()
         Me.BtnAcercade = New System.Windows.Forms.Button()
         Me.BtnAyuda = New System.Windows.Forms.Button()
         Me.BtnObras = New System.Windows.Forms.Button()
@@ -40,8 +43,6 @@ Partial Class FormContenedor
         Me.BtnPañol = New System.Windows.Forms.Button()
         Me.BtnReclamos = New System.Windows.Forms.Button()
         Me.BtnInicio = New System.Windows.Forms.Button()
-        Me.PanelBarraTitulo = New System.Windows.Forms.Panel()
-        Me.LabelTitulo = New System.Windows.Forms.Label()
         Me.ImgRestoreTitulo = New System.Windows.Forms.PictureBox()
         Me.ImgMinimizeTitulo = New System.Windows.Forms.PictureBox()
         Me.ImgMaximizeTitulo = New System.Windows.Forms.PictureBox()
@@ -94,27 +95,6 @@ Partial Class FormContenedor
         Me.GroupBoxLogin.TabIndex = 1
         Me.GroupBoxLogin.TabStop = False
         Me.GroupBoxLogin.Text = "Ingresar"
-        '
-        'BtnLogin
-        '
-        Me.BtnLogin.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(68, Byte), Integer))
-        Me.BtnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.BtnLogin.FlatAppearance.BorderSize = 0
-        Me.BtnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(70, Byte), Integer))
-        Me.BtnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(12, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
-        Me.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnLogin.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLogin.ForeColor = System.Drawing.Color.White
-        Me.BtnLogin.Image = CType(resources.GetObject("BtnLogin.Image"), System.Drawing.Image)
-        Me.BtnLogin.Location = New System.Drawing.Point(155, 296)
-        Me.BtnLogin.Name = "BtnLogin"
-        Me.BtnLogin.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.BtnLogin.Size = New System.Drawing.Size(458, 70)
-        Me.BtnLogin.TabIndex = 4
-        Me.BtnLogin.Text = "INGRESAR"
-        Me.BtnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.BtnLogin.UseVisualStyleBackColor = False
         '
         'TextBoxPass
         '
@@ -172,6 +152,7 @@ Partial Class FormContenedor
         'PanelMenu
         '
         Me.PanelMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(68, Byte), Integer))
+        Me.PanelMenu.Controls.Add(Me.BtnReportes)
         Me.PanelMenu.Controls.Add(Me.BtnAcercade)
         Me.PanelMenu.Controls.Add(Me.BtnAyuda)
         Me.PanelMenu.Controls.Add(Me.BtnObras)
@@ -184,6 +165,72 @@ Partial Class FormContenedor
         Me.PanelMenu.Name = "PanelMenu"
         Me.PanelMenu.Size = New System.Drawing.Size(200, 680)
         Me.PanelMenu.TabIndex = 1
+        '
+        'PanelBarraTitulo
+        '
+        Me.PanelBarraTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
+        Me.PanelBarraTitulo.Controls.Add(Me.LabelTitulo)
+        Me.PanelBarraTitulo.Controls.Add(Me.ImgRestoreTitulo)
+        Me.PanelBarraTitulo.Controls.Add(Me.ImgMinimizeTitulo)
+        Me.PanelBarraTitulo.Controls.Add(Me.ImgMaximizeTitulo)
+        Me.PanelBarraTitulo.Controls.Add(Me.ImgCloseTitulo)
+        Me.PanelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelBarraTitulo.Location = New System.Drawing.Point(0, 0)
+        Me.PanelBarraTitulo.Name = "PanelBarraTitulo"
+        Me.PanelBarraTitulo.Size = New System.Drawing.Size(1280, 40)
+        Me.PanelBarraTitulo.TabIndex = 0
+        '
+        'LabelTitulo
+        '
+        Me.LabelTitulo.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTitulo.ForeColor = System.Drawing.Color.White
+        Me.LabelTitulo.Location = New System.Drawing.Point(5, 5)
+        Me.LabelTitulo.Name = "LabelTitulo"
+        Me.LabelTitulo.Size = New System.Drawing.Size(712, 30)
+        Me.LabelTitulo.TabIndex = 4
+        Me.LabelTitulo.Text = "Sistema de Control Interno Informático - Lomas De Zamora"
+        '
+        'BtnLogin
+        '
+        Me.BtnLogin.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(4, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(68, Byte), Integer))
+        Me.BtnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.BtnLogin.FlatAppearance.BorderSize = 0
+        Me.BtnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.BtnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(12, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
+        Me.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnLogin.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLogin.ForeColor = System.Drawing.Color.White
+        Me.BtnLogin.Image = CType(resources.GetObject("BtnLogin.Image"), System.Drawing.Image)
+        Me.BtnLogin.Location = New System.Drawing.Point(155, 296)
+        Me.BtnLogin.Name = "BtnLogin"
+        Me.BtnLogin.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.BtnLogin.Size = New System.Drawing.Size(458, 70)
+        Me.BtnLogin.TabIndex = 4
+        Me.BtnLogin.Text = "INGRESAR"
+        Me.BtnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnLogin.UseVisualStyleBackColor = False
+        '
+        'BtnReportes
+        '
+        Me.BtnReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.BtnReportes.FlatAppearance.BorderSize = 0
+        Me.BtnReportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(50, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.BtnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(12, Byte), Integer), CType(CType(61, Byte), Integer), CType(CType(92, Byte), Integer))
+        Me.BtnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnReportes.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnReportes.ForeColor = System.Drawing.Color.White
+        Me.BtnReportes.Image = Global.Sistema_de_Control_Interno_Informático_Lomas_de_Zamora.My.Resources.Resources.result
+        Me.BtnReportes.Location = New System.Drawing.Point(0, 394)
+        Me.BtnReportes.Margin = New System.Windows.Forms.Padding(5)
+        Me.BtnReportes.Name = "BtnReportes"
+        Me.BtnReportes.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.BtnReportes.Size = New System.Drawing.Size(200, 70)
+        Me.BtnReportes.TabIndex = 7
+        Me.BtnReportes.Text = "Reportes    "
+        Me.BtnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnReportes.UseVisualStyleBackColor = True
         '
         'BtnAcercade
         '
@@ -332,30 +379,6 @@ Partial Class FormContenedor
         Me.BtnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.BtnInicio.UseVisualStyleBackColor = True
         '
-        'PanelBarraTitulo
-        '
-        Me.PanelBarraTitulo.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(142, Byte), Integer))
-        Me.PanelBarraTitulo.Controls.Add(Me.LabelTitulo)
-        Me.PanelBarraTitulo.Controls.Add(Me.ImgRestoreTitulo)
-        Me.PanelBarraTitulo.Controls.Add(Me.ImgMinimizeTitulo)
-        Me.PanelBarraTitulo.Controls.Add(Me.ImgMaximizeTitulo)
-        Me.PanelBarraTitulo.Controls.Add(Me.ImgCloseTitulo)
-        Me.PanelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelBarraTitulo.Location = New System.Drawing.Point(0, 0)
-        Me.PanelBarraTitulo.Name = "PanelBarraTitulo"
-        Me.PanelBarraTitulo.Size = New System.Drawing.Size(1280, 40)
-        Me.PanelBarraTitulo.TabIndex = 0
-        '
-        'LabelTitulo
-        '
-        Me.LabelTitulo.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelTitulo.ForeColor = System.Drawing.Color.White
-        Me.LabelTitulo.Location = New System.Drawing.Point(5, 5)
-        Me.LabelTitulo.Name = "LabelTitulo"
-        Me.LabelTitulo.Size = New System.Drawing.Size(712, 30)
-        Me.LabelTitulo.TabIndex = 4
-        Me.LabelTitulo.Text = "Sistema de Control Interno Informático - Lomas De Zamora"
-        '
         'ImgRestoreTitulo
         '
         Me.ImgRestoreTitulo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -451,4 +474,5 @@ Partial Class FormContenedor
     Friend WithEvents BtnLogin As Button
     Friend WithEvents TextBoxPass As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents BtnReportes As Button
 End Class

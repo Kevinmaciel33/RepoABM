@@ -6,7 +6,7 @@ Public Class FormContenedor
 
 #Region "DECLARACIONES"
 
-    Private Const rutalogs As String = "c:\scilogs\AccesoLog_{0}.txt"
+    Private Const rutalogs As String = "\\PC-SERVER\db\scilogs\AccesoLog_{0}.txt"
     Dim strFile As String = String.Format(rutalogs, DateTime.Today.ToString("dd-MMM-yyyy"))
 
     Dim username As String
@@ -29,8 +29,8 @@ Public Class FormContenedor
         BtnAyuda.Enabled = False
         BtnAcercade.Enabled = False
 
-        If (Not System.IO.Directory.Exists("c:\scilogs")) Then
-            System.IO.Directory.CreateDirectory("c:\scilogs")
+        If (Not System.IO.Directory.Exists("\\PC-SERVER\db\scilogs")) Then
+            System.IO.Directory.CreateDirectory("\\PC-SERVER\db\scilogs")
         End If
 
         Try
@@ -242,6 +242,10 @@ Public Class FormContenedor
     End Sub
     Private Sub BtnAcercade_Click(sender As Object, e As EventArgs) Handles BtnAcercade.Click
         AbrirFormEnPanel(Of FormAcercade)()
+        BtnAcercade.BackColor = Color.FromArgb(200, 80, 115)
+    End Sub
+    Private Sub BtnReportes_Click(sender As Object, e As EventArgs) Handles BtnReportes.Click
+        AbrirFormEnPanel(Of FormReportesReclamos)()
         BtnAcercade.BackColor = Color.FromArgb(200, 80, 115)
     End Sub
 

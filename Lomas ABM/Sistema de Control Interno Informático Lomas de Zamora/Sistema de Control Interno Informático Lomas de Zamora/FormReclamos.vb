@@ -120,8 +120,6 @@
             '     "OR (año LIKE '" & TxtSearch.Text & "')"
 
             Select Case Tsearch
-                Case "Todo"
-                    ReclamosBindingSource.Filter = "(Convert(NumReclamo, 'System.String') LIKE '" & TxtSearch.Text & "%" & "')"
                 Case "Número reclamo"
                     ReclamosBindingSource.Filter = "(Convert(NumReclamo, 'System.String') LIKE '" & TxtSearch.Text & "%" & "')"
                 Case "Tipo de reclamo"
